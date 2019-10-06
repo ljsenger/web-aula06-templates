@@ -1,18 +1,14 @@
+{% extends "principal.html" %}
 {% import 'macros.html' as macros %}
-<!DOCTYPE html>
-<html>
-<head>
 
-	<title></title>
-</head>
-<body>
-
+{% block body %}
 <h1> Modelos Disponíveis: </h1>
-<ul> 
+<div class="w3-container">
+<ul class="w3-ul w3-hoverable">
     {% for x in m: %}
         {{ macros.listaModelos(m[x])}}
     {% endfor %}
 </ul>
+</div>
+{% endblock %}
 
-</body>
-</html>	
