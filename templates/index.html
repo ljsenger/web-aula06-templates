@@ -5,6 +5,10 @@
 	<title></title>
 </head>
 <body>
-<h1> Ola {{ name | capitalize }}, ao Mundo dos Templates! </h1>
+	{% if name %}
+	<h1> Ola {{ name | capitalize }}, ao Mundo dos Templates! </h1>
+	{% else %}
+	<h1> Ola Estranho, ao Mundo dos Templates!</h1>
+	{% endif %}
 </body>
 </html>	
