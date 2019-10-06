@@ -5,7 +5,13 @@
 	<title></title>
 </head>
 <body>
-<h1> Listagem de produtos: </h1>
-<h3> Produto {{m['0'] }}</h3>
+    
+<h1> Modelos Disponíveis: </h1>
+<ul> 
+    {% for x in m: %}
+    <li> {{ m[x] }} </li>
+    {% endfor %}
+</ul>
+
 </body>
 </html>	
