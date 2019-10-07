@@ -20,6 +20,11 @@
 				<li><a href="/">Home</a></li>
 				<li><a href={{ url_for('produtos') }}>Produtos</a></li>
 				<li><a href="/">Fale Conosco</a></li>
+				<li><a href="/login"> {% if getUser() %} 
+									 	Olá {{ getUser() }} ! 
+									{% else %}
+									  	Entre! 
+									{% endif %}</a></li>
             </ul>
         </div>
     </div>
