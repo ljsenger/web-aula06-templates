@@ -23,5 +23,5 @@ def favicon():
     return redirect(url_for('static', filename='favicon.ico'))
 
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)
 
