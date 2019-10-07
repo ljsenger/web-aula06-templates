@@ -23,17 +23,18 @@
         </div>
     </div>
 </div>
+</nav>
 {% endblock %}
 
 
 {% block content %}
-<div class="container">
-		<div class="jumbotron">
+<div class="container p-3 mb-2 bg-primary text-white"">
+		
 		{% if name %}
 	 		<h1> Ola {{ name | capitalize }}, ao Mundo dos Templates Herdados! </h1>
 		{% else %}
 	 		<h1>Ola Estranho, ao Mundo dos Templates Herdados! </h1>
 		{% endif %}
-	</div>
+	
 </div>
 {% endblock %}
