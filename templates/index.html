@@ -1,17 +1,39 @@
-{% extends "principal.html" %}
-{% block title %} Página Principal {% endblock %}
+{% extends "bootstrap/base.html" %}
 
-{% block head %}
-	{{ super() }}
-	<title>Novo Título </title>
+{% block title %}Página principal{% endblock %}
+
+{% block navbar %}
+<nav class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Pegasus</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+				<li><a href="/">Home</a></li>
+				<li><a href="/">Produtos</a></li>
+				<li><a href="/">Fale Conosco</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
 {% endblock %}
 
-{% block body %}
-<div class="w3-container w3-red">	
-{% if name %}
-	<h1> Ola {{ name | capitalize }}, ao Mundo dos Templates Herdados!</h1>
-	{% else %}
-	<h1> Ola Estranho, ao Mundo dos Templates Herdados!</h1>
-{% endif %}
+
+{% block content %}
+<div class="container">
+		<div class="jumbotron">
+		{% if name %}
+	 		<h1> Ola {{ name | capitalize }}, ao Mundo dos Templates Herdados! </h1>
+		{% else %}
+	 		<h1>Ola Estranho, ao Mundo dos Templates Herdados! </h1>
+		{% endif %}
+	</div>
 </div>
 {% endblock %}

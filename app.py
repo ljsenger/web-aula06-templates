@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, json, url_for, redirect
+from flask_bootstrap import Bootstrap
 
 modelos={"0": "pegasus", "1": "vintage", "2": "sport"}
 
 app = Flask("app")
+bootstrap = Bootstrap(app)
 
 @app.route("/")
 def index():
