@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, json, url_for, redirect, make_response
 from flask_bootstrap import Bootstrap
 
+
 modelos={"0": "pegasus", "1": "vintage", "2": "sport"}
 
 app = Flask("app")
