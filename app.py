@@ -2,7 +2,13 @@ from flask import Flask, render_template, request, json, url_for, redirect, make
 from flask_bootstrap import Bootstrap
 
 
-modelos={"0": "pegasus", "1": "vintage", "2": "sport"}
+#modelos={"0": "pegasus", "1": "vintage", "2": "sport"}
+modelos = { "0":  {"nome": "pegasus", "preco": 500, "promocao": False},
+            "1":  {"nome": "vintage", "preco": 1500, "promocao": False},
+            "2":  {"nome": "sport",   "preco": 1500, "promocao": True},
+            "3":  {"nome": "eco",     "preco": 759, "promocao": True}
+}
+
 
 app = Flask("app")
 bootstrap = Bootstrap(app)
@@ -21,6 +27,10 @@ def user(name):
 @app.route("/modelos")
 def produtos():
     return render_template("produtos.html", m=modelos)
+
+@app.route("/promocoes")
+def promocoes():
+    return render_template("promocoes.html", m=modelos)    
 
 @app.route('/favicon.ico')
 def favicon():

@@ -19,6 +19,7 @@
             <ul class="nav navbar-nav">
 				<li><a href="/">Home</a></li>
 				<li><a href={{ url_for('produtos') }}>Produtos</a></li>
+				<li><a href={{ url_for('promocoes') }}>Promocoes</a></li>
 				<li><a href="/">Fale Conosco</a></li>
 				<li><a href="/login"> {% if getUser() %} 
 									 	Olá {{ getUser() }} ! 
